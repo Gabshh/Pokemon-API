@@ -1,82 +1,81 @@
-.conteudo-container{
-    position: absolute;
+.conteudo-container {
+	position: absolute;
 }
 
-.logo-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.logo-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-#pesquisa-container{
-    display: flex;
-    flex-direction: row;
-    height: 100px;
-    width: 70vw;
-    border-radius: 20px;
-    padding: 24px;
-    gap: 20px;
-    background-color: white;
+#pesquisa-container {
+	display: flex;
+	flex-direction: row;
+	height: 100px;
+	width: 70vw;
+	border-radius: 20px;
+	padding: 24px;
+	gap: 20px;
+	background-color: white;
 }
 
-#pesquisa-container > i{
-    font-size: 50px;
+#pesquisa-container > i {
+	font-size: 50px;
 }
 
-i{
-    color: #7097FD;
+i {
+	color: #7097fd;
 }
 
-#caixa-pesquisa{
-    height: 50px;
-    width: 50%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 0 0 10px;
-    padding: 20px;
-    display: flex;
-    position: relative;
-    color: #7097FD;
+#caixa-pesquisa {
+	height: 50px;
+	width: 50%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	background-color: white;
+	border-radius: 15px;
+	box-shadow: 0 0 10px;
+	padding: 20px;
+	display: flex;
+	position: relative;
+	color: #7097fd;
 }
 
-#pesquisa-pokemon{
-    font-size: 1rem;
-    color: #7097FD;
-    height: 50px;
-    width: 100%;
-    margin-left: auto;
-    margin-right:auto;
-    text-align: start;
-    padding-left: 10px;
-    border-radius: 10px;
-    border: none;
-    outline: none;
-    display:block;
-    position: relative;
+#id-pokemon {
+	font-size: 1rem;
+	color: #7097fd;
+	height: 50px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: start;
+	padding-left: 10px;
+	border-radius: 10px;
+	border: none;
+	outline: none;
+	display: block;
+	position: relative;
 }
 
-#pesquisa-pokemon::placeholder { 
-    color: #7097FD;
-  }
-  
+#id-pokemon::placeholder {
+	color: #7097fd;
+}
 
-#pesquisa-tipo{
-    font-size: 1rem;
-    height: 50px;
-    width: 50%;
-    margin-left: auto;
-    margin-right:auto;
-    text-align: start;
-    padding-left: 10px;
-    border-radius: 15px;
-    box-shadow: 0 0 10px;
-    border: none;
-    outline: none;
-    display:block;
-    position: relative;
-    color: #7097FD;
+#pesquisa-tipo {
+	font-size: 1rem;
+	height: 50px;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: start;
+	padding-left: 10px;
+	border-radius: 15px;
+	box-shadow: 0 0 10px;
+	border: none;
+	outline: none;
+	display: block;
+	position: relative;
+	color: #7097fd;
 }

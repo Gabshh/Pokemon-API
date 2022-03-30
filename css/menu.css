@@ -1,97 +1,97 @@
-#menu-pokeball{
-    z-index: 2;
+#menu-pokeball {
+	z-index: 2;
 }
 
-.poke-menu{
-    height: 120px;
-    width: 120px;
-    border-radius: 70px;
-    background-color: #fff;
-    transition: all 0.5s ease;
-    /*margin-top: 340px;*/
-    padding-top: 10px;
-    padding-left: 10px;
+.poke-menu {
+	height: 120px;
+	width: 120px;
+	border-radius: 70px;
+	background-color: #fff;
+	transition: all 0.5s ease;
+	/*margin-top: 340px;*/
+	padding-top: 10px;
+	padding-left: 10px;
 }
 
-#menu{
-    width: 120px;
-    height: 120px;
-    margin: 30px 0 20px 20px;
-    cursor: pointer;
-    border-radius: 70px;
+#menu {
+	width: 120px;
+	height: 120px;
+	margin: 30px 0 20px 20px;
+	cursor: pointer;
+	border-radius: 70px;
 }
 
-#menu-poke{
-    background: url(../img/blueClosedBall.svg);
-    height: 99px;
-    width: 99px;
-    display: block;
-    border-radius: 50px;
-    transition: 0.5s ease;
+#menu-poke {
+	background: url(../img/blueClosedBall.svg);
+	height: 99px;
+	width: 99px;
+	display: block;
+	border-radius: 50px;
+	transition: 0.5s ease;
 }
 
 .nav li a {
-    color: #656565;
-    font-family: Arial, Helvetica, sans-serif, Courier, monospace;
-    text-decoration: none;
+	color: #656565;
+	font-family: Arial, Helvetica, sans-serif, Courier, monospace;
+	text-decoration: none;
+	margin-left: 20px;
 }
 
 .nav li a:hover {
-    background-color: #ccc;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 39px;    
+	background-color: #ccc;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 39px;
 }
 
 .nav li {
-    list-style: none;
-    padding: 16px 0;
+	list-style: none;
+	padding: 16px 0;
 }
 
-.nav{
-    padding: 0;
-    margin: 0 20px;
-    transition: 0.3s ease;
-    display: none;
-    margin-top: 50px;
+.nav {
+	padding: 0;
+	margin: 0 20px;
+	display: none;
+	margin-top: 50px;
 }
 
-.menu-closed, #menu-pokeball{
-    top: 0;
-    left: 0;
-    position: absolute;
+.menu-closed,
+#menu-pokeball {
+	top: 0;
+	left: 0;
+	position: absolute;
 }
 
-.menu-closed{
-    z-index: 1;
-    width: 0;
-    height: 0;
-    margin: 30px 0 20px 20px;
-    background: radial-gradient(circle, #ffffff, #c9d6ff);
-    border-radius: 50%;
-    transition: 0.3s ease;
+.menu-closed {
+	z-index: 1;
+	width: 0;
+	height: 0;
+	margin: 30px 0 20px 20px;
+	background: radial-gradient(circle, #ffffff, #c9d6ff);
+	border-radius: 50%;
+	transition: 0.3s ease;
 }
 
-#menu-pokeball{
-    z-index:2;
+#menu-pokeball {
+	z-index: 2;
 }
 
 .change-pokeball {
-    width: 550px;
-    height: 540px;
-    transform: translate(-60%, -30%);
+	width: 550px;
+	height: 540px;
 }
 
-.change .poke-menu{
-    background-color: white;
-    height: 900px;
-    width: 150px;
+.change .poke-menu {
+	background-color: white;
+	height: 900px;
+	width: 150px;
 }
 .change #menu-poke {
-    background: url(../img/blueOpenBall.svg);
-    margin-left: 15px;
+	background: url(../img/blueOpenBall.svg);
+	margin-left: 15px;
 }
 
-.change{
-    display: block;
+.change {
+	display: block;
 }

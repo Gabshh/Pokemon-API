@@ -1,3 +1,24 @@
 {
-    "liveServer.settings.port": 5501
+	"liveServer.settings.port": 5501,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.formatOnSave": true,
+	"editor.tabSize": 4,
+	"prettier.enable": true,
+
+	"workbench.colorTheme": "Synthwave x Fluoromachine & epic animations",
+	"vscode_custom_css.imports": [
+		"file:///C:/Users/{21276337}/.vscode/extensions/thecodemonkey.synthwave-x-fluoromachine-epic-animations-1.4.13/synthwave-x-fluoromachine.css",
+		"file:///C:/Users/{21276337}/.vscode/extensions/thecodemonkey.synthwave-x-fluoromachine-epic-animations-1.4.13/epic-80s-transitions.css"
+	],
+
+	"editor.rulers": [
+		{
+			"column": 120,
+			"color": "#8A2DB8"
+		}
+	],
+	"prettier.tabWidth": 4,
+	"prettier.printWidth": 120,
+	"prettier.useTabs": true,
+	"prettier.semi": true
 }
