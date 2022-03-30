@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" type="x-icon" href="./img/pokebola.png">
+        <link rel="stylesheet" type="text/css" href="./css/reset.css">
+        <link rel="stylesheet" type="text/css" href="./css/menu.css">
+        <link rel="stylesheet" type="text/css" href="./css/conteudo.css">
+        <link rel="stylesheet" type="text/css" href="./css/landscape.css">
+        <link rel="stylesheet" type="text/css" href="./css/style.css">
+
+        <script src="./js/menu.js" defer></script>
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        
+        <title>Pokémon API</title>
+    </head>
+    <body>
+        <section class="home">
+
+            <div id="menu-pokeball">
+                <div id="menu" onclick="menuOnClick()">
+                    <div class="poke-menu">
+                    <div id="menu-poke" class="menu-icon"></div>
+                    </div>
+                </div>
+                <ul class="nav" id="nav">
+                    <li><a href="#">Pokédex</a></li>
+                    <li><a href="#">Meu Pokémons</a></li>
+                </ul>
+            </div>
+            <div class="menu-closed" id="menu-closed"></div>
+
+            <div class="conteudo-container">
+
+                <div class="logo-container">
+                    <img src="./img/pokemonLogo.png" id="pokemon-logo" alt="logo">
+                </div>
+
+                <div id="pesquisa-container">
+
+                    <div id="caixa-pesquisa">
+                        <i class="material-icons">search</i>
+                        <input type="text" placeholder="Buscar Pokémon..." id="pesquisa-pokemon">
+                    </div>
+                    
+                    <select name="" id="pesquisa-tipo">
+                        <option>Buscar por tipo...</option>
+                        <option>dragon</option>
+                        <option>poison</option>
+                        <option>ghost</option>
+                        <option>fire</option>
+                        <option>water</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="background">
+                
+                <div class="nuvens-container">
+                    <div class="nuvens"></div>
+                </div>
+
+            </div>
+        </section>
+            
+
+    </body>
+</html>
