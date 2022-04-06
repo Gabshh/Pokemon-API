@@ -1,17 +1,43 @@
 "use strict";
 
-alert("ta safe :)");
+const carregarPokemon = async () => {
+	const url = `https://pokeapi.co/api/v2/pokemon/`;
+	const response = await fetch(url);
+	const data = await response.json();
+
+	return data;
+};
 
 const pesquisarTipos = async () => {
 	const url = "https://pokeapi.co/api/v2/type/";
 	const response = await fetch(url);
 	const data = await response.json();
-	const tipo = Object.keys(data.results);
-	return tipo;
+	
+	return Object.keys(data.results);
+	
+};
+
+const carregarTipos = async () => {
+	const lista = document.getElementById("pesquisa-tipo");
+	const tipos = await pesquisarTipos();
+
+	lista.innerHTML = `
+                        <option>
+                            ${tipos.join("</option><option>")}
+                        </option>
+                      `;
 };
 
 const pesquisarPokemon = async (nome) => {
 	const url = `https://pokeapi.co/api/v2/pokemon/${nome}/`;
+	const response = await fetch(url);
+	const data = await response.json();
+
+	return data;
+};
+
+const pesquisarSpritePokemon = async (idPokemon) => {
+	const url = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${idPokemon}.png`;
 	const response = await fetch(url);
 	const data = await response.json();
 
@@ -26,53 +52,42 @@ const criarImg = (imagem) => {
 
 const carregarImagens = async () => {
 	const spritesContainer = document.getElementById("sprites-container");
-	const idPokemon = document.getElementById("id-pokemon").value;
+	const pesquisaId = document.getElementById("pesquisa-id").value;
 
-	const imagens = await pesquisarPokemon(idPokemon);
+	const imagens = await pesquisarSpritePokemon(pesquisaId);
 
-	const tagImagens = imagens.message.map(criarImg);
+	const tagImagens = imagens.map(criarImg);
 
 	spritesContainer.replaceChildren(...tagImagens);
 };
 
-const carregarTipos = async () => {
-	const lista = document.getElementById("pesquisa-tipo");
-	const tipos = await pesquisarTipos();
-
-	lista.innerHTML = `
-                        <option>
-                            ${tipos.join("</option><option>")}
-                        </option>
-                      `;
-};
-
-// CRIANDO CARDS
+////////////////////////// CRIAÇÃO DOS CARDS ///////////////////////////////////
 
 const criarCard = (pokemon) => {
     
-    const card = document.createElement('div')
-    card.classList.add('card')
+    const card = document.createElement('div');
+    card.classList.add('card');
     card.innerHTML = `
         <div class="card-image-container">
-            <img src="${pokemon.sprite}" alt="Sprite" class="card-image">
+            <img src="${sprite}" alt="Sprite" class="card-image">
         </div>
-        <span class="card-descricao">
-            ${pokemon.nome}
+        <span class="card-nome">
+            ${nome}
         </span>
-    `
-    return card
+    `;
+    return card;
 }
 
 const carregarCardsPokemons = (pokemons) => {
-    const container = document.querySelector('.card-container')
+    const container = document.querySelector('.card-container');
     
-	const cards = pokemons.map(criarCard)
+	const cards = pokemons.map(criarCard);
 
-    container.replaceChildren(...cards)
+    container.replaceChildren(...cards);
 
 }
 
-carregarCardsPokemons(pesquisarPokemon(bulbasaur))
+carregarCardsPokemons(pesquisarPokemon());
 
-document.getElementById("pesquisar").addEventListener("click", carregarImagens())
-document.getElementById("pesquisa-tipo").addEventListener("click", carregarTipos())
+document.getElementById("pesquisar").addEventListener("click", carregarImagens());
+document.getElementById("pesquisa-tipo").addEventListener("click", carregarTipos());
