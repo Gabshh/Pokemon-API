@@ -10,8 +10,8 @@ const pesquisarTipos = async () => {
 	return tipo;
 };
 
-const pesquisarPokemon = async (pokemon) => {
-	const url = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon}.png`;
+const pesquisarPokemon = async (nome) => {
+	const url = `https://pokeapi.co/api/v2/pokemon/${nome}/`;
 	const response = await fetch(url);
 	const data = await response.json();
 
@@ -46,5 +46,33 @@ const carregarTipos = async () => {
                       `;
 };
 
-document.getElementById("pesquisar").addEventListener("click", carregarImagens());
-document.getElementById("pesquisa-tipo").addEventListener("click", carregarTipos());
+// CRIANDO CARDS
+
+const criarCard = (pokemon) => {
+    
+    const card = document.createElement('div')
+    card.classList.add('card')
+    card.innerHTML = `
+        <div class="card-image-container">
+            <img src="${pokemon.sprite}" alt="Sprite" class="card-image">
+        </div>
+        <span class="card-descricao">
+            ${pokemon.nome}
+        </span>
+    `
+    return card
+}
+
+const carregarCardsPokemons = (pokemons) => {
+    const container = document.querySelector('.card-container')
+    
+	const cards = pokemons.map(criarCard)
+
+    container.replaceChildren(...cards)
+
+}
+
+carregarCardsPokemons(pesquisarPokemon(bulbasaur))
+
+document.getElementById("pesquisar").addEventListener("click", carregarImagens())
+document.getElementById("pesquisa-tipo").addEventListener("click", carregarTipos())

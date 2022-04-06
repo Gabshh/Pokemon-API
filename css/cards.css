@@ -1,0 +1,48 @@
+
+main {
+    flex-grow: 1;
+    z-index: 999;
+}
+
+.card-container{
+    padding: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 360px;
+    width: 300px;
+    transition: box-shadow 1s;
+    padding: 8px;
+    background-color: aliceblue;
+}
+
+.card:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 20px #0003;
+}
+
+.card-image-container {
+    width: 100%;
+    height: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.card-image{
+    max-width: 100%;
+    max-height: 100%;
+    
+}
+
+.card-descricao {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+}
