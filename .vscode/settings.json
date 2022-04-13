@@ -4,6 +4,10 @@
 	"editor.formatOnSave": true,
 	"editor.tabSize": 4,
 	"prettier.enable": true,
+	"prettier.tabWidth": 4,
+	"prettier.printWidth": 120,
+	"prettier.useTabs": true,
+	"prettier.semi": true,
 
 	"workbench.colorTheme": "Synthwave x Fluoromachine & epic animations",
 	"vscode_custom_css.imports": [
@@ -17,8 +21,5 @@
 			"color": "#8A2DB8"
 		}
 	],
-	"prettier.tabWidth": 4,
-	"prettier.printWidth": 120,
-	"prettier.useTabs": true,
-	"prettier.semi": true
+
 }
