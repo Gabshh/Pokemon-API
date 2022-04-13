@@ -1,5 +1,6 @@
 
 main {
+    margin-top: 400px;
     flex-grow: 1;
     z-index: 999;
 }
@@ -21,28 +22,79 @@ main {
     background-color: aliceblue;
 }
 
-.card:hover {
-    cursor: pointer;
-    box-shadow: 0px 0px 20px #0003;
+.card-container {
+	
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Lato';
+	margin: 0;
 }
 
-.card-image-container {
-    width: 100%;
-    height: 65%;
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+	letter-spacing: 3px;
+}
+
+.poke-container {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: space-between;
+	justify-content: center;
+	margin: 0 auto;
+	max-width: 1200px;
+	z-index: 99;
+}
+
+.pokemon {
+	background-color: #eee;
+	border-radius: 20px;
+	box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+	margin: 10px;
+	padding: 20px;
+	text-align: center;
+    transition: all 0.1s ease;
+}
+
+.pokemon:hover {
+    transform: scale(1.09);
+    transition: 0.5s;
+    cursor: pointer;
+    box-shadow: 0px 0px 20px rgba(79, 96, 255, 0.2);
+}
+
+.pokemon .img-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+	background-color: rgba(255, 255, 255, 0.6);
+	border-radius: 50%;
+	width: 120px;
+	height: 120px;
+	text-align: center;
 }
 
-.card-image{
-    max-width: 100%;
-    max-height: 100%;
-    
+.pokemon .img-container img {
+	margin-top: 20px;
+	max-width: 90%;
 }
 
-.card-descricao {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 1rem;
-    font-weight: 500;
+.pokemon .info {
+	margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.pokemon .number {
+	background-color: rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	font-size: 0.8em;
+	padding: 5px 10px;
+}
+
+.pokemon .name {
+    font-family: Arial, Helvetica, sans-serif;
+	margin: 15px 0 7px;
+	letter-spacing: 1px;
 }
