@@ -14,9 +14,11 @@ const colors = {
 	fairy: '#fceaff',
 	poison: '#98d7a5',
 	bug: '#f8d5a3',
+	ice: '#F5F5F5',
+	dark: '#C27AEE',
 	dragon: '#97b3e6',
 	psychic: '#eaeda1',
-	flying: '#F5F5F5',
+	flying: '#FFD1F2',
 	fighting: '#E6E0D4',
 	normal: '#F5F5F5'
 };
@@ -55,7 +57,7 @@ function createPokemonCard(pokemon) {
 							.toString()
 							.padStart(3, '0')}</span>
             <h3 class="name">${name}</h3>
-            <small class="type">Type: <span>${type}</span></small>
+            <small class="type"> <span>${type}</span></small>
         </div>
     `;
 
@@ -74,4 +76,5 @@ function createPokemonCard(pokemon) {
 }
 
 fetchPokemons();
+
 
